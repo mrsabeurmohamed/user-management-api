@@ -1,0 +1,34 @@
+@UserManagementAPI_HostAddress = http://localhost:5151
+
+### Create a user
+POST {{UserManagementAPI_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "firstName": "Ada",
+  "lastName": "Lovelace",
+  "email": "ada@example.com",
+  "role": "Administrator"
+}
+
+### Get all users
+GET {{UserManagementAPI_HostAddress}}/api/users
+Accept: application/json
+
+### Get a user by ID
+GET {{UserManagementAPI_HostAddress}}/api/users/1
+Accept: application/json
+
+### Update a user
+PUT {{UserManagementAPI_HostAddress}}/api/users/1
+Content-Type: application/json
+
+{
+  "firstName": "Ada",
+  "lastName": "Lovelace",
+  "email": "ada@example.com",
+  "role": "User"
+}
+
+### Delete a user
+DELETE {{UserManagementAPI_HostAddress}}/api/users/1
